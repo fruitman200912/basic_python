@@ -29,10 +29,16 @@ elif int(b1) == int(b2):
     print("==")
 elif int(b1) < int(b2):
     print("<")
-if int(b1) >= int(b2):
-    print(">=")
-elif int(b1) != int(b2):
-    print("!=")
+
+r = 1
+while r != 0:
+    r = int(input("r:"))
+    if -1 >= r:
+        break
+    for i in range(r,-1,-1):
+        if i % 2 == 0:
+            continue
+        print(i)
 
 bit1, bit2 = input("bit1 bit2:").split()
 print(int(bit1)>>1, int(bit1)<<int(bit1))
