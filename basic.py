@@ -46,3 +46,11 @@ print(~int(bit1))
 print(int(bit1) & int(bit2))
 print(int(bit1) | int(bit2))
 print(int(bit1) ^ int(bit2))
+
+n = int(input("n:"))
+l = [[0 for j in range(10)] for i in range(n)]
+
+for i in range(n):
+    for j in range(10):
+        print(l[i][j],end=' ')
+    print()
