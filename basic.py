@@ -20,15 +20,21 @@ print('\"', format(float(f1) % float(f2),".4f"),'\'', sep='\\')
 print('\"', format(float(f1) ** float(f2),".5f"),'\'', sep='\\')
 
 b1, b2 = input("b1 b2:").split()
-print(int(b1) < int(b2))
-print(int(b1) > int(b2))
-print(int(b1) <= int(b2))
-print(int(b1) >= int(b2))
-print(int(b1) == int(b2))
-print(int(b1) != int(b2))
+print(int(b1) if int(b1) <= int(b2) else int(b2))
 print((bool(b1) and (not bool(b2))) or ((not bool(b1)) and bool(b2)))
 
-bit1, bit2 = input().split()
+if int(b1) > int(b2):
+    print(">")
+elif int(b1) == int(b2):
+    print("==")
+elif int(b1) < int(b2):
+    print("<")
+if int(b1) >= int(b2):
+    print(">=")
+elif int(b1) != int(b2):
+    print("!=")
+
+bit1, bit2 = input("bit1 bit2:").split()
 print(int(bit1)>>1, int(bit1)<<int(bit1))
 print(~int(bit1))
 print(int(bit1) & int(bit2))
